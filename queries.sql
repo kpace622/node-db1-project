@@ -6,15 +6,15 @@
 
 -- Find the phone number for the supplier with the id 11
 
-    -- SELECT Phone FROM [Suppliers] where SupplierID = 11;
+    -- select Phone from [Suppliers] where SupplierID = 11;
 
 -- List first 10 orders placed, sorted descending by the order date
 
-    -- SELECT * FROM [Orders] order by OrderDate desc limit 10
+    -- select * from Orders order by OrderDate desc limit 10
 
 -- Find all customers that live in London, Madrid, or Brazil
 
-    -- SELECT * FROM [Customers] where City in ('London', 'Madrid') or Country = 'Brazil'
+    -- select * from Customers where City in ('London', 'Madrid') or Country = 'Brazil'
 
 -- Add a customer record for "The Shire", the contact name is "Bilbo Baggins" the address is -"1 Hobbit-Hole" in "Bag End", postal code "111" and the country is "Middle Earth"
 
@@ -29,4 +29,8 @@
 
 -- (Stretch) Find a query to discover how many different cities are stored in the Customers table. Repeats should not be double counted
 
+    -- select count (distinct City) from Customers
+
 -- (Stretch) Find all suppliers who have names longer than 20 characters. You can use `length(SupplierName)` to get the length of the name
+
+    -- select * from Suppliers where length(SupplierName) > 20
